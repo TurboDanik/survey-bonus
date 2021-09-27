@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>My survey form</title>
+	<style>
+		#survey-form {
+			width: 50%;
+			border: 1px solid black;
+			margin-left: 25%;
+			padding: 20px;
+		}
+		h2 {
+			text-align: center;
+		}
+		div {
+			margin: 30px;
+		}		
+		table {
+			border-collapse: collapse;
+			width: 80%;
+			height: 500px;
+			text-align: center;
+		}
+		table, td {
+			border: 1px solid #ddeeee;
+		}
+		input[type=text] {
+			width: 50%;
+		}
+		input[type=submit] {
+			background-color: #04AA6D;
+  			border: none;
+  			color: white;
+  			padding: 12px 40px;
+  			display: block;
+  			margin: auto;
+  			cursor: pointer;
+		}
+		.table-head {
+			background-color: #ddeeee;
+		}
+		#survey-number {
+			width: 100%;
+			height: 25px;
+		}
+		.info {
+			font-size: 11px;
+			color: grey;
+		}
+		.width-50 {
+			width: 50%;
+			height: 25px;
+		}
+	</style>
+</head>
+<body>
+	<form id="survey-form">
+		<h2>Health Product Satisfaction Survey</h2>
+		<hr>
+
+		<div>
+		<p style="color: grey;">Survey Number</p>
+		<input type="text" id="survey-number" name="survey-number" placeholder="0000" disabled>
+		</div>
+
+		<div>
+		<p>Survey Date</p>
+		<input type="date" class="width-50" name="survey-date" value="2021-09-14"><br>
+		<label class="info">Date</label>
+		</div>
+
+		<div>
+		<p>Health Product Name</p>
+		<input type="text" class="width-50" name="product-name">	
+		</div>
+		
+		<div>
+		<p>Type of Health Product</p>
+		<input type="radio" name="health-product" value="pharmaceutical-products"><label>Pharmaceutical products</label>
+		<input type="radio" name="health-product" value="supplements"><label>Supplements</label><br>
+		<input type="radio" name="health-product" value="organic-remedies"><label>Organic Remedies</label>
+		<input type="radio" name="health-product" value="medical-devices"><label>Medical devices</label><br>
+		<input type="radio" name="health-product" value="health-and-beauty"><label>Health and Beauty</label>
+		<input type="radio" name="health-product" value="sports-and-fitness"><label>Sports and Fitness</label><br>
+		<input type="radio" name="health-product" value="other"><label>Other</label>
+		</div>
+		
+		<div>
+		<p>Health Product Description (General purpose)</p>
+		<textarea name="product-description" style="width: 100%; height: 120px;" placeholder="Type here..."></textarea>
+		</div>
+		
+		<div>
+		<p>How would you rate this product?</p>
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<td class="table-head">Not Satisfied</td>
+					<td class="table-head">Somewhat Satisfied</td>
+					<td class="table-head">Satisfied</td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="product-quality">Product Quality</label></td>
+					<td><input type="radio" name="product-quality" value="not-satisfied"></td>
+					<td><input type="radio" name="product-quality" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="product-quality" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="product-design">Product Design</label></td>
+					<td><input type="radio" name="product-design" value="not-satisfied"></td>
+					<td><input type="radio" name="product-design" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="product-design" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="effectiveness">Effectiveness</label></td>
+					<td><input type="radio" name="effectiveness" value="not-satisfied"></td>
+					<td><input type="radio" name="effectiveness" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="effectiveness" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="easy-to-use">Easy to use?</label></td>
+					<td><input type="radio" name="easy-to-use" value="not-satisfied"></td>
+					<td><input type="radio" name="easy-to-use" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="easy-to-use" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="experience">Purchase Experince</label></td>
+					<td><input type="radio" name="experience" value="not-satisfied"></td>
+					<td><input type="radio" name="experience" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="experience" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="price">Price (SRP)</label></td>
+					<td><input type="radio" name="price" value="not-satisfied"></td>
+					<td><input type="radio" name="price" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="price" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="outcome">Result Outcome</label></td>
+					<td><input type="radio" name="outcome" value="not-satisfied"></td>
+					<td><input type="radio" name="outcome" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="outcome" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="instructions">Instructions</label></td>
+					<td><input type="radio" name="instructions" value="not-satisfied"></td>
+					<td><input type="radio" name="instructions" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="instructions" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="documentation">Documentation</label></td>
+					<td><input type="radio" name="documentation" value="not-satisfied"></td>
+					<td><input type="radio" name="documentation" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="documentation" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="support">After purchase support</label></td>
+					<td><input type="radio" name="support" value="not-satisfied"></td>
+					<td><input type="radio" name="support" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="support" value="satisfied"></td>
+				</tr>
+				<tr>
+					<td class="table-head"><label for="service">Customer Service</label></td>
+					<td><input type="radio" name="service" value="not-satisfied"></td>
+					<td><input type="radio" name="service" value="somewhat-satisfied"></td>
+					<td><input type="radio" name="service" value="satisfied"></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+
+		<div>
+			<p>Are you going to recommend this to your friends, family or colleagues?</p>
+			<input type="radio" name="recommend" value="definitely">Definitely
+			<input type="radio" name="recommend" value="probably">Probably<br>
+			<input type="radio" name="recommend" value="not-sure">Not sure
+			<input type="radio" name="recommend" value="definitely-not">Definitely not
+		</div>
+
+		<div>
+			<p>Are you going to by this product again?</p>
+			<input type="radio" name="buy-again" value="yes">Yes
+			<input type="radio" name="buy-again" value="no">No<br>
+			<input type="radio" name="buy-again" value="maybe">Maybe
+		</div>
+
+		<div>
+			<p>How long have you been using this health product?</p>
+			<input type="text" class="width-50" name="how-long"><br>
+			<label class="info">Months, weeks or days</label>
+		</div>
+
+		<div>
+			<p>Are you familiar with the company who created this health product?</p>
+			<input type="radio" name="you-familiar" value="yes">Yes<br>
+			<input type="radio" name="you-familiar" value="no">No
+		</div>
+
+		<div>
+			<p>Have you purchased any other products from this company? If yes, are you satisfied with it?</p>
+			<textarea name="are-you-satisfied" style="width: 100%; height: 120px;" placeholder="Type here..."></textarea>	
+		</div>
+
+		<div>
+			<p>Does this product have warranty?</p>
+			<input type="radio" name="warranty" value="yes">Yes<br>
+			<input type="radio" name="warranty" value="no">No
+		</div>
+
+		<div>
+			<p>How much is this health product ($)?</p>
+			<input type="text" name="cost">
+		</div>
+
+		<div>
+			<p>How often do you use this product?</p>
+			<input type="radio" name="often-use" value="monthly">Monthly
+			<input type="radio" name="often-use" value="weekly">Weekly<br>
+			<input type="radio" name="often-use" value="daily">Dayly
+			<input type="radio" name="often-use" value="rarely">Rarely<br>
+			<input type="radio" name="often-use" value="never">Never
+		</div>
+
+		<div>
+			<p>Gender</p>
+			<input type="radio" name="gender" value="male">Male<br>
+			<input type="radio" name="gender" value="female">Female
+		</div>
+
+		<div>
+			<p>Age Group</p>
+			<input type="radio" name="age" value="0-14">0-14 years old
+			<input type="radio" name="age" value="15-24">15-24 years old<br>
+			<input type="radio" name="age" value="25-64">25-64 years old
+			<input type="radio" name="age" value="65+">65 years old and above
+		</div>
+
+		<div>
+			<p>Participant`s Phone Number</p>
+			<input type="tel" class="width-50" name="phone-number" placeholder="(000) 000-0000">
+		</div>
+
+		<div>
+			<p>Participant`s Email</p>
+			<input type="email" class="width-50" name="email"><br>
+			<label class="info">example@example.com</label>
+		</div>
+
+		<div>
+			<p>Would it be okay if we contact you so that you can further explain your feedback about our product?</p>
+			<input type="radio" name="if-we-contact" value="yes">Yes<br>
+			<input type="radio" name="if-we-contact" value="no">No
+		</div>
+
+		<div>
+			<p>Would you like to receive updates and promotional emails from us?</p>
+			<input type="radio" name="receive-updates" value="yes">Yes<br>
+			<input type="radio" name="receive-updates" value="no">No
+		</div>
+
+		<hr>
+			<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
